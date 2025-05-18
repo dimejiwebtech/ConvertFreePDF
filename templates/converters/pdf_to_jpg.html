@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}PDF to JPG - Convert PDF to JPG Image File Online{% endblock %}
+
+{% block content %}
+<!-- Tool Header -->
+<section class="tool-header">
+    <div class="section-centre">
+        <h2>Convert PDF to JPG Image - Fast, Free & Reliable</h2>
+        <p>Turn your PDFs into high-quality JPG images with just a single click.</p>
+    </div>
+</section>
+
+<!-- Upload Section -->
+<section class="upload-section">
+    <div class="section-centre">
+        <div class="upload-box">
+            <label for="file-upload">
+                <span class="file-icon">📄</span>
+                <span class="file-text">Choose a File</span>
+            </label>
+            <input type="file" id="file-upload" accept=".pdf">
+            <p>Upload your PDF file</p>
+        </div>
+        <button class="convert-btn" data-tool="pdf_to_jpg">Convert to JPG</button>
+    </div>
+</section>
+
+<!-- What is PDF to DOC? -->
+<section class="info-section">
+    <div class="section-centre">
+        <h2>What is PDF to JPG?</h2>
+        <p>PDF to JPG is a process that converts a PDF file into a JPG image. This helps when you need to save or share a document as an image. It is useful for printing, uploading, or viewing on devices that do not support PDFs.</p>
+    </div>
+</section>
+
+
+<!-- How It Works -->
+<section class="how-it-works">
+    <div class="section-centre">
+        <h2>How to Convert PDF to JPG</h2>
+        <div class="grid">
+            <div class="step">
+                <span>1</span>
+                <h3>Upload Your PDF</h3>
+                <p>Select or drag your PDF file into the upload box.</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <h3>Click Convert</h3>
+                <p>Our tool will quickly convert your file into JPG format.</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <h3>Download Your JPG File</h3>
+                <p>Get your converted image in seconds.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="section-centre">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <h3>How do I use a PDF to JPG converter?</h3>
+            <p>To use this tool, upload your PDF file, click on convert to JPG and download it once done.</p>
+        </div>
+        <div class="faq">
+            <h3>Is the PDF to JPG conversion free?</h3>
+            <p>The tool works free without any hidden fees attached to it.</p>
+        </div>
+        <div class="faq">
+            <h3>Do I need to install software for PDF to JPG conversion?</h3>
+            <p>No, this is a web-based tool that works on all browsers.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById("file-upload").addEventListener("change", function() {
+    let fileName = this.files[0] ? this.files[0].name : "Drag & Drop or Click to Upload PDF";
+    document.getElementById("file-name").textContent = fileName;
+});
+</script>
+
+{% endblock %}

@@ -1,0 +1,202 @@
+{% extends 'base.html' %} {% load static %} {% block title %}ConvertFreePDF -
+Free Online PDF Converter (100%) {% endblock %} {% block content %}
+<div class="container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="section-centre hero-content">
+      <h1>Convert Your PDFs Easily & For Free!</h1>
+      <p>Fast, secure, and free PDF conversion tools.</p>
+      <a href="#tools" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section class="tools" id="tools">
+    <div class="section-centre">
+      <h2 class="tool-text section-title">Choose a Conversion Tool</h2>
+      <p class="tool-header-text">
+        our tool allows instant conversion of PDF files to some of the notable
+        formats and vice versa.
+      </p>
+      <div class="grid">
+        <div class="tool-card">
+          <svg
+            width="200"
+            height="200"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="200" height="200" rx="20" fill="#D32F2F" />
+            <text
+              x="50%"
+              y="40%"
+              font-size="24"
+              fill="white"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              PDF
+            </text>
+            <text
+              x="50%"
+              y="70%"
+              font-size="24"
+              fill="white"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              DOC
+            </text>
+            <line
+              x1="60"
+              y1="100"
+              x2="140"
+              y2="100"
+              stroke="white"
+              stroke-width="5"
+            />
+            <polygon points="130,90 150,100 130,110" fill="white" />
+          </svg>
+          <p>Convert PDFs to editable Word documents.</p>
+          <a href="{% url 'pdf_to_doc' %}" class="btn small">Convert Now</a>
+        </div>
+
+        <div class="tool-card">
+          <svg
+            width="200"
+            height="200"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="200" height="200" rx="20" fill="#1976D2" />
+            <text
+              x="50%"
+              y="40%"
+              font-size="24"
+              fill="white"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              DOC
+            </text>
+            <text
+              x="50%"
+              y="70%"
+              font-size="24"
+              fill="white"
+              font-weight="bold"
+              text-anchor="middle"
+            >
+              PDF
+            </text>
+            <line
+              x1="60"
+              y1="100"
+              x2="140"
+              y2="100"
+              stroke="white"
+              stroke-width="5"
+            />
+            <polygon points="130,90 150,100 130,110" fill="white" />
+          </svg>
+          <p>Turn Word documents into PDFs.</p>
+          <a href="{% url 'doc_to_pdf' %}" class="btn small">Convert Now</a>
+        </div>
+
+        <div class="tool-card">
+          <svg
+            width="200"
+            height="200"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Background -->
+            <rect width="200" height="200" rx="20" fill="#F44336" />
+
+            <!-- PDF Text -->
+            <text
+              x="50%"
+              y="45%"
+              font-size="32"
+              fill="white"
+              font-weight="bold"
+              text-anchor="middle"
+              dominant-baseline="middle"
+            >
+              PDF
+            </text>
+
+            <!-- Compression Arrows -->
+            <line
+              x1="40"
+              y1="120"
+              x2="80"
+              y2="120"
+              stroke="white"
+              stroke-width="4"
+            />
+            <polygon points="80,110 95,120 80,130" fill="white" />
+
+            <line
+              x1="160"
+              y1="120"
+              x2="120"
+              y2="120"
+              stroke="white"
+              stroke-width="4"
+            />
+            <polygon points="120,110 105,120 120,130" fill="white" />
+
+            <!-- Label: Compress -->
+            <text
+              x="50%"
+              y="160"
+              font-size="18"
+              fill="white"
+              text-anchor="middle"
+              font-weight="bold"
+            >
+              Compress
+            </text>
+          </svg>
+
+          <p>Reduce PDF file sizes while retaining quality</p>
+          <a href="{% url 'pdf_compressor' %}" class="btn small"
+            >Compress Now</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="section-centre">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">
+        Using our tool is simple! Just follow these easy steps.
+      </p>
+
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-icon">1</div>
+          <h3>Upload Your File</h3>
+          <p>Choose the file you want to convert.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-icon">2</div>
+          <h3>Convert Instantly</h3>
+          <p>Our tool quickly processes your file in seconds.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-icon">3</div>
+          <h3>Download Your File</h3>
+          <p>Get your converted file instantly with one click.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

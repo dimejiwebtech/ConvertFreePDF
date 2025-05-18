@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}ConvertFreePDF{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tools.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/pages.css' %}" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/favicon-2.png' %}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navigation Bar -->
+      <header class="navbar">
+        <div class="section-centre navbar-grid">
+          <!-- Logo -->
+          <a href="{% url 'home' %}" class="home-link"
+            ><h1 class="logo">ConvertFreePDF</h1></a
+          >
+
+          <!-- Navigation Menu -->
+          <nav id="nav-menu" class="nav-menu">
+            <ul class="nav-links">
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'contact' %}">Contact</a></li>
+              <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+
+              <!-- Dropdown Menu for PDF Tools -->
+              <div class="dropdown">
+                <a href="#">All PDF Tools ▾</a>
+                <ul class="dropdown-menu">
+                  <li><a href="{% url 'pdf_to_doc' %}">PDF to DOC</a></li>
+                  <li><a href="{% url 'doc_to_pdf' %}">DOC to PDF</a></li>
+                  <!-- <li><a href="{% url 'pdf_to_jpg' %}">PDF to JPG</a></li> -->
+                  <!-- <li><a href="{% url 'jpg_to_pdf' %}">JPG to PDF</a></li> -->
+                  <!-- <li><a href="{% url 'pdf_to_png' %}">PDF to PNG</a></li> -->
+                  <li>
+                    <a href="{% url 'pdf_compressor' %}">PDF Compressor</a>
+                  </li>
+                  <!-- <li><a href="{% url 'merge_pdf' %}">Merge PDF</a></li> -->
+                </ul>
+              </div>
+            </ul>
+          </nav>
+
+          <!-- Mobile Menu Toggle Button (Hidden on Large Screens) -->
+          <button id="menu-toggle" class="menu-btn">☰</button>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <!-- <main class="main-layout"> -->
+      {% block content %} {% csrf_token %} {% endblock %}
+      <!-- </main> -->
+
+      <!-- Footer -->
+      <footer>
+        <div class="section-centre footer-grid">
+          <!-- Column 1: Logo & Description -->
+          <div class="footer-column">
+            <a class="home-link" href="{% url 'home' %}"
+              ><h2 class="footer-logo">ConvertFreePDF</h2></a
+            >
+            <p class="footer-logo-text">
+              Convert your PDFs quickly and easily with our free tools. Secure,
+              fast, and user-friendly.
+            </p>
+          </div>
+
+          <!-- Column 2: Top Tools -->
+          <div class="footer-column">
+            <h3>Top Tools</h3>
+            <ul>
+              <li><a href="{% url 'pdf_to_doc' %}">PDF to DOC</a></li>
+              <li><a href="{% url 'doc_to_pdf' %}">DOC to PDF</a></li>
+              <!-- <li><a href="{% url 'pdf_to_jpg' %}">PDF to JPG</a></li> -->
+              <!-- <li><a href="{% url 'jpg_to_pdf' %}">JPG to PDF</a></li> -->
+              <!-- <li><a href="{% url 'pdf_to_png' %}">PDF to PNG</a></li> -->
+              <li><a href="{% url 'pdf_compressor' %}">PDF Compressor</a></li>
+              <!-- <li><a href="{% url 'merge_pdf' %}">Merge PDF</a></li> -->
+            </ul>
+          </div>
+
+          <!-- Column 3: Pages -->
+          <div class="footer-column">
+            <h3>Pages</h3>
+            <ul>
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'contact' %}">Contact</a></li>
+              <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>
+            © 2025
+            <a class="home-link" href="{% url 'home' %}">ConvertFreePDF.</a> All
+            Rights Reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- script -->
+    <script defer src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

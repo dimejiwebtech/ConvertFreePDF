@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block title %}Compress PDF Online - Same PDF File, Less File Size{% endblock %}
+
+{% block content %}
+<!-- Tool Header -->
+<section class="tool-header">
+    <div class="section-centre">
+        <h2>Online PDF Compressor - Make PDF Files Smaller With 100% Quality</h2>
+        <p>Turn your bulky PDF files Into Smaller Chunks Without Any Effects on The Quality</p>
+    </div>
+</section>
+
+<!-- Upload Section -->
+<section class="upload-section">
+    <div class="section-centre">
+        <div class="upload-box">
+            <label for="file-upload">
+                <span class="file-icon">📄</span>
+                <span class="file-text">Select PDF file(s)</span>
+            </label>
+            <input type="file" id="file-upload" accept=".pdf">
+            <p>Drag & Drop PDF Files</p>
+        </div>
+        <button class="convert-btn" data-tool="pdf_compressor">Compress PDF</button>
+    </div>
+</section>
+
+<!-- What is PDF to DOC? -->
+<section class="info-section">
+    <div class="section-centre">
+        <h2>What is Online PDF Compressor?</h2>
+        <p>An online PDF compressor is a tool that reduces the file size of a PDF document. It helps save storage space and makes sharing faster. These tools work by removing unnecessary data while keeping the document's quality.</p>
+    </div>
+</section>
+
+
+<!-- How It Works -->
+<section class="how-it-works">
+    <div class="section-centre">
+        <h2>How to Compress PDF Online</h2>
+        <div class="grid">
+            <div class="step">
+                <span>1</span>
+                <h3>Upload Your PDF</h3>
+                <p>Select or drag the PDF files into the upload box</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <h3>Click on Compress</h3>
+                <p>The compression tool will quickly remove unnecessary data from your PDF files within seconds.</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <h3>Download Your Compressed PDF</h3>
+                <p>After the compression is done, download your files with a single click.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="section-centre">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <h3>How do I compress a PDF using this tool?</h3>
+            <p>Simply upload your PDF, wait for the tool to process it, and then download the compressed version.</p>
+        </div>
+        <div class="faq">
+            <h3>Will my PDF lose quality after compression?</h3>
+            <p>The tool is designed to balance file size and quality.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Is it safe to upload my PDF for compression?</h3>
+            <p>Yes, ConvertFreePDF.com ensures file security by automatically deleting uploaded and compressed files after a short period.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Can I compress multiple PDFs at once?</h3>
+            <p>Currently, the tool supports compressing one PDF at a time.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Does the tool work on mobile devices?</h3>
+            <p>Yes, the Online PDF Compressor is web-based and works on all devices.</p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById("file-upload").addEventListener("change", function() {
+    let fileName = this.files[0] ? this.files[0].name : "Drag & Drop or Click to Upload PDF";
+    document.getElementById("file-name").textContent = fileName;
+});
+</script>
+
+{% endblock %}

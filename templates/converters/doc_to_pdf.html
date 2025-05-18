@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block title %}Online DOC to PDF (100%) - ConvertFreePDF{% endblock %}
+
+{% block content %}
+<!-- Tool Header -->
+<section class="tool-header">
+    <div class="section-centre">
+        <h2>Convert DOC to PDF - Free & Online</h2>
+        <p>Convert all your DOC (docx) files into Portable Document Files with high accuracy without losing file quality. With this tool, you can turn single or batch files to PDF's that works on popular PDF tools and programs..</p>
+    </div>
+</section>
+
+<!-- Upload Section -->
+<section class="upload-section">
+    <div class="section-centre">
+        <div class="upload-box">
+            <label for="file-upload">
+                <span class="file-icon">📄</span>
+                <span class="file-text">Choose a file</span>
+            </label>
+            <input type="file" id="file-upload" accept=".docx">
+            <p>Drag & Drop or Click to Upload DOC</p>
+        </div>
+        <button class="convert-btn" data-tool="doc_to_pdf">Convert to PDF</button>
+    </div>
+</section>
+
+<!-- What is PDF to DOC? -->
+<section class="info-section">
+    <div class="section-centre">
+        <h2>What is DOC to PDF?</h2>
+        <p>DOC to PDF refers to converting a Microsoft Word document (DOC or DOCX) into a PDF file. This ensures the document keeps its layout, fonts, and formatting across all devices.</p>
+    </div>
+</section>
+
+
+<!-- How It Works -->
+<section class="how-it-works">
+    <div class="section-centre">
+        <h2>How to Convert DOC to PDF</h2>
+        <div class="grid">
+            <div class="step">
+                <span>1</span>
+                <h3>Upload Your DOC File</h3>
+                <p>Select or drag your DOC file (s) into the upload box.</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <h3>Click Convert</h3>
+                <p>Our tool will quickly convert your file into PDF format.</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <h3>Download Your PDF</h3>
+                <p>Once the conversion is done, a download prompt will show in seconds.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="section-centre">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <h3>What is DOC to PDF?</h3>
+            <p>Doc to PDF is a conversion tool that will let you turn Microsoft Word documents to PDFs while keeping the layout and fonts intact.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Why should I convert a DOC to PDF?</h3>
+            <p>PDFs are more secure, easier to share, and preserve formatting across all devices.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Is my data secure?</h3>
+            <p>All uploaded files are deleted automatically after conversion.</p>
+        </div>
+
+        <div class="faq">
+            <h3>How do I convert a DOC to PDF using ConvertFreePDF?</h3>
+            <p>Upload your DOC file, click “Convert,” and download your PDF instantly.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Will the converted PDF look the same as my DOC file?</h3>
+            <p>Yes, the fonts, images, and layout will remain unchanged.</p>
+        </div>
+
+
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById("file-upload").addEventListener("change", function() {
+    let fileName = this.files[0] ? this.files[0].name : "Drag & Drop or Click to Upload PDF";
+    document.getElementById("file-name").textContent = fileName;
+});
+</script>
+
+{% endblock %}

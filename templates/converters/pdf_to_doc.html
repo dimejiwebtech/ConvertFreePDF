@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}Convert PDF to DOC - Free & Online{% endblock %}
+
+{% block content %}
+<!-- Tool Header -->
+<section class="tool-header">
+    <div class="section-centre">
+        <h2>Convert PDF to DOC - Free & Online</h2>
+        <p>Quickly and securely convert your PDFs into editable Word documents with high accuracy.</p>
+    </div>
+</section>
+
+<!-- Upload Section -->
+<section class="upload-section">
+    <div class="section-centre">
+        <div class="upload-box">
+            <label for="file-upload">
+                <span class="file-icon">📄</span>
+                <span class="file-text">Choose a file</span>
+            </label>
+            <input type="file" id="file-upload" accept=".pdf">
+            <p>Click to Upload PDF Files</p>
+        </div>
+        <button class="convert-btn" data-tool="pdf_to_doc">Convert to DOC</button>
+    </div>
+</section>
+
+<!-- What is PDF to DOC? -->
+<section class="info-section">
+    <div class="section-centre">
+        <h2>What is PDF to DOC?</h2>
+        <p>PDF to DOC is a file conversion process that changes a PDF document into a Word (.DOC or .DOCX) file. This allows users to edit the text, images, and formatting in Microsoft Word.</p>
+    </div>
+</section>
+
+
+<!-- How It Works -->
+<section class="how-it-works">
+    <div class="section-centre">
+        <h2>How to Convert PDF to DOC</h2>
+        <div class="grid">
+            <div class="step">
+                <span>1</span>
+                <h3>Upload Your PDF</h3>
+                <p>Select or drag your PDF file into the upload box.</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <h3>Click Convert</h3>
+                <p>The tool will convert your file into DOC format within seconds.</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <h3>Download Your DOC</h3>
+                <p>Save your converted file on your device.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="section-centre">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <h3>What is a PDF to DOC online tool?</h3>
+            <p>A PDF to DOC online tool converts PDF files into editable Word documents (DOC or DOCX).</p>
+        </div>
+        <div class="faq">
+            <h3>Is the PDF to DOC conversion free?</h3>
+            <p>This tool is made available for free without any hidden fees or subscription.</p>
+        </div>
+        <div class="faq">
+            <h3>Can I edit the converted DOC file?</h3>
+            <p>Yes, once converted, the DOC file can be opened and edited on Microsoft Word or any word processing tool.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById("file-upload").addEventListener("change", function() {
+    let fileName = this.files[0] ? this.files[0].name : "Drag & Drop or Click to Upload PDF";
+    document.getElementById("file-name").textContent = fileName;
+});
+</script>
+
+{% endblock %}

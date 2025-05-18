@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block title %}Merge PDF Online - Combine PDF Files Online For Free {% endblock %}
+
+{% block content %}
+<!-- Tool Header -->
+<section class="tool-header">
+    <div class="section-centre">
+        <h2>Merge Multiple PDF Files | Fast, Safe & Reliable</h2>
+        <p>With a Single Click, You Can Upload Multiple PDF Files and Combine Them Into One Without Losing Quality. </p>
+    </div>
+</section>
+
+<!-- Upload Section -->
+<section class="upload-section">
+    <div class="section-centre">
+        <div class="upload-box">
+            <label for="file-upload">
+                <span class="file-icon">📄</span>
+                <span class="file-text">Select PDF Files</span>
+            </label>
+            <input type="file" id="file-upload" multiple accept=".pdf">
+            <p>Drag & Drop or Click to Upload PDF</p>
+        </div>
+        <button class="convert-btn" data-tool="merge_pdf">Merge PDFs</button>
+    </div>
+</section>
+
+<!-- What is PDF to DOC? -->
+<section class="info-section">
+    <div class="section-centre">
+        <h2>What is PDF Online Merger?</h2>
+        <p>A PDF Online Merger is a tool that lets you combine multiple PDF files into one document. It works through a web browser, so there’s no need to install software. Simply upload your PDFs, arrange them in order, and merge them. It’s a quick and easy way to organise files</p>
+    </div>
+</section>
+
+
+<!-- How It Works -->
+<section class="how-it-works">
+    <div class="section-centre">
+        <h2>How to Merge Multiple PDF Files</h2>
+        <div class="grid">
+            <div class="step">
+                <span>1</span>
+                <h3>Upload Your PDF Files</h3>
+                <p>Select or drag and drop all your PDF files into the upload box.</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <h3>Click on Merge</h3>
+                <p>Our tool will quickly merge all your uploaded PDF files into one.</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <h3>Download Your Files</h3>
+                <p>Your merged PDF files will be available to you in seconds.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="section-centre">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <h3>Is a PDF merger tool free to use?</h3>
+            <p>Our online merger tool is 100% free. However, there are some limitations to the number of files you can merge at once.</p>
+        </div>
+        <div class="faq">
+            <h3>How do I merge PDFs online?</h3>
+            <p>Upload your PDF files to the tool, arrange them in order, <b>click Merge PDFs</b>, and download the combined file.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Is it safe to merge PDFs online?</h3>
+            <p>We use multiple encryption methods to delete files after merging. Therefore, it's safe to merge your PDF files here at ConvertFreePDF.com</p>
+        </div>
+
+        <div class="faq">
+            <h3>Can I merge password-protected PDFs?</h3>
+            <p>Yes, but you need to enter the correct password before merging them.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Can I merge PDFs on my phone?</h3>
+            <p>Our tool supports merging PDF files on smartphones and PCs.</p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById("file-upload").addEventListener("change", function() {
+    let fileName = this.files[0] ? this.files[0].name : "Drag & Drop or Click to Upload PDF";
+    document.getElementById("file-name").textContent = fileName;
+});
+</script>
+
+{% endblock %}

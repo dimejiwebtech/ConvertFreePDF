@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}PDF to PNG - Convert PDF Files to PNG Images Online Free{% endblock %}
+
+{% block content %}
+<!-- Tool Header -->
+<section class="tool-header">
+    <div class="section-centre">
+        <h2>Free PDF to PNG Converter</h2>
+        <p>This tool allows you to quickly transform any PDF files into PNG images with a single click.</p>
+    </div>
+</section>
+
+<!-- Upload Section -->
+<section class="upload-section">
+    <div class="section-centre">
+        <div class="upload-box">
+            <label for="file-upload">
+                <span class="file-icon">📄</span>
+                <span class="file-text">Choose a file</span>
+            </label>
+            <input type="file" id="file-upload" accept=".pdf">
+            <p>Click to Upload PDF</p>
+        </div>
+        <button class="convert-btn" data-tool="pdf_to_png">Convert to PNG</button>
+    </div>
+</section>
+
+<!-- What is PDF to DOC? -->
+<section class="info-section">
+    <div class="section-centre">
+        <h2>What is PDF to PNG?</h2>
+        <p>A PDF to PNG tool converts PDF files into PNG images. It helps users extract pages from a PDF and save them as high-quality pictures. This tool is useful for sharing, editing, or using PDFs as images in documents or websites.</p>
+    </div>
+</section>
+
+
+<!-- How It Works -->
+<section class="how-it-works">
+    <div class="section-centre">
+        <h2>How to Convert PDF to PNG</h2>
+        <div class="grid">
+            <div class="step">
+                <span>1</span>
+                <h3>Upload Your PDF</h3>
+                <p>Click or drag your PDF file into the upload box.</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <h3>Click Convert</h3>
+                <p>Our tool will quickly convert your file into PNG format.</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <h3>Download Your PNG</h3>
+                <p>Once the conversion is done, download your PNG file.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="section-centre">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <h3>Is PDF to PNG free?</h3>
+            <p>Yes, Our converter is 100% free to use.</p>
+        </div>
+        <div class="faq">
+            <h3>Can I convert PDF to PNG on mobile?</h3>
+            <p>Yes, this tool works on mobile devices.</p>
+        </div>
+        <div class="faq">
+            <h3>Is my data secure?</h3>
+            <p>All uploaded files are deleted automatically after conversion.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById("file-upload").addEventListener("change", function() {
+    let fileName = this.files[0] ? this.files[0].name : "Drag & Drop or Click to Upload PDF";
+    document.getElementById("file-name").textContent = fileName;
+});
+</script>
+
+{% endblock %}
